@@ -30,7 +30,7 @@ function initText(data) {
 }
 
 // setup interval to apply past/present/future classes to time blocks
-// updates styles every minute every minute
+// updates styles every minute
 function initStyles() {
   (function _update() {
     const currentHour = dayjs().hour();
