@@ -1,9 +1,9 @@
-const APP_KEY = 'day-planner';
+const STORAGE_KEY = 'day-planner';
 
 $(main);
 
 function main() {
-  const data = getFromLocalStorage(APP_KEY) || {};
+  const data = getFromLocalStorage(STORAGE_KEY) || {};
   $('.saveBtn').on('click', handleSave(data));
   initText(data);
   initStyles();
@@ -16,7 +16,7 @@ function handleSave(data) {
     const key = btn.parent().attr('id');
     const val = btn.siblings('textarea.description').val();
     data[key] = val;
-    saveToLocalStorage(APP_KEY, data);
+    saveToLocalStorage(STORAGE_KEY, data);
   };
 }
 
