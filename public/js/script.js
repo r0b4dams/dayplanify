@@ -23,7 +23,7 @@ $(function () {
       timeBlock.children("textarea.description").val(text);
 
       // add to document
-      $("body").append(timeBlock);
+      $("#calendar").append(timeBlock);
     }
     addStyles();
     addListeners(data);
@@ -78,4 +78,10 @@ $(function () {
       saveToLocalStorage(STORAGE_KEY, data);
     };
   }
+
+  // add year to footer
+  (function year() {
+    const y = $("footer #year");
+    y.text(new Date().getFullYear());
+  })();
 });
