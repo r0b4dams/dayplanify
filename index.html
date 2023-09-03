@@ -20,12 +20,12 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./public/css/style.css" />
-    <title>Work Day Scheduler</title>
+    <title>Dayplanify</title>
   </head>
 
   <body class="container-md">
-    <header class="p-5 mb-4 border-5 border-bottom border-dark">
-      <h1 class="display-3">Day Planner</h1>
+    <header class="p-5 mb-3 border-5 border-bottom border-dark">
+      <h1 class="display-3">📅 Dayplanify</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="current-day" class="lead"></p>
     </header>
@@ -41,7 +41,13 @@
       </div>
     </template>
 
-    <script defer src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <main id="calendar"></main>
+
+    <footer class="p-5 mt-3 border-5 border-top border-dark text-center">
+      <a href="https://www.robertadams.codes/" target="_blank">
+        Robert Adams © <span id="year"></span>
+      </a>
+    </footer>
 
     <script
       defer
@@ -50,6 +56,7 @@
       crossorigin="anonymous"
     ></script>
 
+    <script defer src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script defer src="./public/js/script.js" type="module"></script>
   </body>
 </html>
